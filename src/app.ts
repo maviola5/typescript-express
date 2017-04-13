@@ -2,7 +2,7 @@ import * as express from 'express';
 let app = express();
 let port: string = process.env.PORT || '3000';
 let httpMethods: string[] = ['post', 'get', 'put', 'delete'];
-let apiNouns: string[] = ['posts', 'products', 'events'];
+let apiNouns: string[] = ['posts', 'products', 'events', 'articles'];
 
 function apiLoop(methods: string[], nouns: string[]) {
     let apiNouns = nouns;
