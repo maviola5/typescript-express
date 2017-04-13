@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "tsc": "tsc",
-    "start": "node dist/app.js",
+    "start": "node ./dist/app.js",
     "build": "tsc",
     "dev": "concurrently \"tsc -w\" \"nodemon dist/app.js\"",
     "postinstall": "npm run build && npm start"
