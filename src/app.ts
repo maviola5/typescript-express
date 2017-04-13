@@ -22,7 +22,7 @@ apiLoop(httpMethods, apiNouns);
 app.get('/', (req, res) => {
     res.status(200)
     .json({
-        "message": "welcome to the typescript-express demo"});
+        "message": "Welcome to the typescript-express demo! Use '/api' endpoint!"});
 });
 app.listen(3000, () => {
     console.log('listening on port 3000');
