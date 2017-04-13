@@ -18,7 +18,5 @@
     "serve-favicon": "~2.3.0",
     "typescript": "^2.2.2"
   },
-  "main": "src/app.ts",
-  "repository": {},
   "license": "MIT"
 }
