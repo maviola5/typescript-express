@@ -2,7 +2,7 @@ import * as express from 'express';
 let app = express();
 let port: string = process.env.PORT || '3000';
 let httpMethods: string[] = ['post', 'get', 'put', 'delete'];
-let apiNouns: string[] = ['posts', 'products', 'events', 'articles'];
+let apiNouns: string[] = ['posts', 'products', 'events', 'articles', 'staff'];
 
 function apiLoop(methods: string[], nouns: string[]) {
     let apiNouns = nouns;
@@ -27,4 +27,12 @@ app.get('/', (req, res) => {
 });
 app.listen(port, () => {
     console.log('listening on port 3000');
+})
+
+
+app.get('/api/posts', function(req, res){
+    res.status(200).json({
+        "message": "hello"
+    });
+
 })
