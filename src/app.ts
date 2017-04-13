@@ -9,7 +9,7 @@ function apiLoop(methods: string[], nouns: string[]) {
     let httpMethods = methods;
     apiNouns.forEach(noun => {
         httpMethods.forEach(method => {
-            app[method](`api/${noun}`, (req, res) => {
+            app[method](`/api/${noun}`, (req, res) => {
                 res.status(200)
                 .json({
                     "message": `${method} request for ${noun} endpoint`
