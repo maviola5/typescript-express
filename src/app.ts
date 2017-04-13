@@ -1,6 +1,6 @@
 import * as express from 'express';
 let app = express();
-let port: string = process.env.PORT || '3000';
+let port: string = (process.env.NODE_ENV === 'production') ? '80' : '3000';
 let httpMethods: string[] = ['post', 'get', 'put', 'delete'];
 let apiNouns: string[] = ['posts', 'products', 'events'];
 
@@ -26,5 +26,5 @@ app.get('/', (req, res) => {
         "message": "Welcome to the typescript-express demo! Use '/api' endpoint!"});
 });
 app.listen(port, () => {
-    console.log('listening on port 3000');
+    console.log(`listening on ${port}`);
 })
